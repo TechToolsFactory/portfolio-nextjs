@@ -104,14 +104,10 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
       </main>
       <footer className="p-6 text-center text-white/80 sm:p-12">
         Made by {' '}
-        <a
-          href="https://edelsonphotography.com/"
-          target="_blank"
-          className="font-semibold hover:text-white"
-          rel="noreferrer"
+        <span
         >
-          Louni Longheval at <b>TechToolsFactory</b>
-        </a>
+          Louni Longheval at <a href='https://techtoolsfactory.com'><b>TechToolsFactory</b></a>
+        </span>
       </footer>
     </>
   )
