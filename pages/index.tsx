@@ -110,7 +110,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           className="font-semibold hover:text-white"
           rel="noreferrer"
         >
-          Louni Longheval
+          Louni Longheval at <b>TechToolsFactory</b>
         </a>
       </footer>
     </>
