@@ -106,7 +106,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         Made by {' '}
         <span
         >
-          Louni Longheval at <a href='https://techtoolsfactory.com'><b>TechToolsFactory</b></a>
+          Louni Longheval at <a href='https://techtoolsfactory.com' className='font-semibold hover:text-white transition duration-500'><b>TechToolsFactory</b></a>
         </span>
       </footer>
     </>
