@@ -61,7 +61,7 @@ export default function SharedModal({
         className={cn(
           currentImage.height >= "3000"
             ? "relative z-50 flex aspect-[2/3] h-full max-w-full items-center"
-            : "relative z-50 flex aspect-[3/2] h-full max-w-7xl items-center"
+            : "relative z-50 flex aspect-[3/2] w-full max-w-7xl items-center"
         )}
         {...handlers}
       >
