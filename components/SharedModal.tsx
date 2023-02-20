@@ -48,6 +48,7 @@ export default function SharedModal({
 
   let currentImage = images ? images[index] : currentPhoto;
   console.log(currentImage);
+  console.log(currentImage.height)
   return (
     <MotionConfig
       transition={{
@@ -55,11 +56,12 @@ export default function SharedModal({
         opacity: { duration: 0.2 },
       }}
     >
+      
       <div
         className={cn(
-          currentImage.height >= "5350"
+          currentImage.height >= "3000"
             ? "relative z-50 flex aspect-[2/3] h-full max-w-full items-center"
-            : "relative z-50 flex aspect-[3/2] w-full max-w-7xl items-center wide:h-full xl:taller-than-854:h-auto"
+            : "relative z-50 flex aspect-[3/2] h-full max-w-7xl items-center"
         )}
         {...handlers}
       >
@@ -99,7 +101,7 @@ export default function SharedModal({
           {loaded && (
             <div
               className={cn(
-                currentImage.height >= "5350"
+                currentImage.height >= "3000"
                   ? "relative aspect-[2/3] max-h-full w-full"
                   : "relative aspect-[3/2] max-h-full w-full"
               )}
