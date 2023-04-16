@@ -67,15 +67,15 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Discover all photos taken by Louni Longheval
             </p>
             
-            <button className="relative overflow-hidden rounded-lg bg-black px-12 py-5 ring-red-500/50 ring-offset-black will-change-transform focus:outline-none focus:ring-1 focus:ring-offset-2">
+            <a href = "mailto: louni@longheval.com" className="relative overflow-hidden rounded-lg bg-black px-12 py-5 ring-red-500/50 ring-offset-black will-change-transform focus:outline-none focus:ring-1 focus:ring-offset-2">
               <span className="absolute inset-px z-10 grid place-items-center rounded-lg bg-black from-neutral-800 text-white/75 font-semibold">
                 Contact
               </span>
               <span
                 aria-hidden
-                className="before:animate-disco before:bg-gradient-conic absolute inset-0 z-0 scale-x-[2.0] blur before:absolute before:inset-0 before:top-1/2 before:aspect-square before:from-purple-700 before:via-red-500 before:to-amber-400"
+                className="before:animate-disco before:bg-gradient-conic absolute inset-0 z-0 scale-x-[2.0] blur before:absolute before:inset-0 before:top-1/2 before:aspect-square before:from-gray-700 before:via-gray-500 before:to-gray-400"
               />
-            </button>
+            </a>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
             <Link
@@ -87,7 +87,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
             >
               <Image
-                alt="Next.js Conf photo"
+                alt="Louni's photo"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder="blur"
@@ -125,7 +125,7 @@ export default Home;
 export async function getStaticProps() {
   const results = await cloudinary.v2.search
     .expression(`folder:${process.env.CLOUDINARY_FOLDER}/*`)
-    .sort_by("public_id", "desc")
+    .sort_by("public_id", "asc")
     .max_results(400)
     .execute();
   let reducedResults: ImageProps[] = [];
