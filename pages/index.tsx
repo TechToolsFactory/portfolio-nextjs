@@ -112,7 +112,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
             href="https://techtoolsfactory.com"
             className="font-semibold transition duration-500 hover:text-white"
           >
-            <b>TechToolsFactory</b>
+            <b>TechToolsAgency</b>
           </a>
         </span>
       </footer>
