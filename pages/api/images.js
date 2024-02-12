@@ -6,5 +6,5 @@ export default async function handler(req, res) {
   .sort_by("public_id", "asc")
   .max_results(400)
   .execute();
-  res.status(200).json(images);
+  res.status(200).json({ text: 'Hello' });;
 }
